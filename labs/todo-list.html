@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/todo.css">
+    <title>TO-DO List</title>
+</head>
+
+<body>
+
+    <section class="container-animation">
+        <div class="text">TO-DO LIST</div>
+        <ul class="slider-text">
+            <li><span>Vamos planejar e organizar o dia? </span></li>
+        </ul>
+        </div>
+    </section>
+
+    <main class="todo">
+        <div class="todo__title">
+            <h2>Sobre o projeto</h2>
+            <p>Para esse projeto pensei em desenvolver algo que parecesse simples, mas que ao mesmo tempo se tornasse complicado na medida em que eu adicionasse diferentes elementos estéticos e com funções.
+                Sendo assim, iniciei pela construção da estrutura do html, que se mostrou curto e simples. Ademias, usei CSS e Javascript para o desenvolvimento do comportamento do design e dos inputs que funcionassem ao click,  sendo os elementos que se mostraram demorados de serem resolvidos.
+            </p>
+        </div>
+        <div class="todo__new-item" id="newItem">
+            <input type="text" placeholder="Eu preciso... + enter" required maxlength="500" autofocus>
+        </div>
+        
+        <div class="todo__list" id='todoList'>
+        </div>
+    </main>
+
+
+    <script src="../script/todo.js"></script>
+</body>
+
+</html>

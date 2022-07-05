@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/academia/academia.css">
+  <link rel="stylesheet" href="../../css/academia/acmenu-mobile.css">
+  <link rel="stylesheet" href="../../css/academia/carousel.css">
+  <script src="https://kit.fontawesome.com/2d5a50068d.js" crossorigin="anonymous"></script>
+  <title>Registre-se</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="../../images/images-acad/workout/logo_transparent.png" alt="3Athletic">
+    </h1>
+
+    <input type="checkbox" id="control-nav">
+    <label for="control-nav" class="control-nav"></label>
+    <label for="control-nav" class="control-nav-close"></label>
+    <nav>
+      <ul>
+        <li>
+          <a href="../../labs/academia/academia-index.html">Home</a>
+        </li>
+        <li>
+          <a href="../../labs/academia/atividades.html">Atividades</a>
+        </li>
+
+        <li>
+          <a href="../../labs/academia/contato.html">Contato</a>
+        </li>
+        <li>
+          <a classe="active" href="#">Login do Atleta</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+
+
+
+  <section class="bg-formulario">
+    <div class="container-formulario">
+      <div class="container-image">
+        <img src="../../images/images-acad/workout/malhar-login.jpg" alt="mulher malhando">
+        <h5>Se conecte com os seus resultados e com a comunidade esportiva</h5>
+      </div>
+
+
+
+      <section class="formulario">
+        <div class="form-content">
+          <div class="cabeçalho-form">
+            <img src="../../images/images-acad/workout/logo_transparent.png">
+            <h2>Login</h2>
+          </div>
+
+
+          <form action="#">
+            <div class="input-box">
+              <i class="fas fa-envelope"></i>
+              <input type="text" placeholder="E-mail" required>
+            </div>
+            <div class="input-box">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Senha" required>
+            </div>
+
+            <span class="texto">
+              <a href="#">Esqueceu a senha?</a>
+            </span>
+
+            <button onclick="msg()">Entrar</button>
+            <div id="mensagem">Esse botão funciona! Obrigada por tentar.</div>
+          </form>
+
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="row">
+      <div class="footer-coluna">
+        <h4>Sobre </h4>
+        <ul>
+          <li><a href="javascript:;" onclick="msg()">Sobre nós</a></li>
+          <li><a href="javascript:;" onclick="msg()">Nossos serviços</a></li>
+          <li><a href="javascript:;" onclick="msg()">Politica de privacidade</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Aulas</h4>
+        <ul>
+          <li><a href="javascript:;" onclick="msg()" class="b-click">Impacto</a></li>
+          <li><a href="javascript:;" onclick="msg()">Aquático</a></li>
+          <li><a href="javascript:;" onclick="msg()">Aeróbico zen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Dúvidas</h4>
+        <ul>
+          <li><a href="javascript:;" onclick="msg()">FAQ</a></li>
+          <li><a href="javascript:;" onclick="msg()">Personal Trainer</a></li>
+          <li><a href="javascript:;" onclick="msg()">Planos e descontos </a></li>
+        </ul>
+      </div>
+      <div class="footer-coluna">
+        <h4>Redes</h4>
+        <div class="social-links">
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-facebook-f"></i></a>
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-twitter"></i></a>
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-instagram"></i></a>
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <p> &copy; Alguns direitos reservados | &lt;Thyala Dias&gt;</p>
+  </footer>
+
+
+  <script src="../../script/academia.js"></script>
+  <script src="../../script/jquery-3.6.0.min.js"></script>
+  <script>
+    var counter = 1;
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if (counter > 4) {
+        counter = 1;
+      }
+    }, 5000);
+
+  </script>
+
+
+</body>
+</html>

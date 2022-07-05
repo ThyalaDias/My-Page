@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@800&display=swap');
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+.container-galeria {
+    width: 100%;
+    min-height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 60px 40px;
+    background: black;/*#f1f1f1;*/
+}
+
+
+.texto-galeria h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: 20px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.texto-galeria h5 {
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+
+.texto-galeria p {
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    font-family: 'Cairo', sans-serif;
+    text-align: center;
+    padding: 15px 120px 50px 120px;
+}
+
+.texto-galeria h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    padding-top: 50px;
+}
+
+h6 img {
+    width: 15px;
+    height: 15px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 940px) {
+    .container-galeria .imagem {
+        flex: 33.33%;
+    }
+    .texto-galeria p {
+        font-size: 1rem;
+        color: white;
+        font-weight: 500;
+        font-family: 'Cairo', sans-serif;
+        text-align: center;
+        padding: 15px 30px 50px 30px;
+    } 
+}
+
+
+
+@media screen and (max-width:640px) {
+    .container-galeria .imagem {
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .container-galeria .imagem {
+        flex: 100%;    
+    }
+
+    .texto-galeria p {
+        font-size: 1rem;
+        color: white;
+        font-weight: 500;
+        font-family: 'Cairo', sans-serif;
+        text-align: center;
+        padding: 15px 30px 50px 30px;
+    }
+}

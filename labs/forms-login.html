@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/forms-login.css">
+  <title>moátoá classes</title>
+</head>
+
+
+<body>
+  <main>
+    <section class="projeto-texto">
+      <h2>Sobre o projeto </h2>
+      <p>
+        O projeto de Formulário para Login e Cadastro foi desenvolvido para fins de estudo e composição de portfolio.
+        Sendo um dos projetos que mais gostei de elaborar, pude aplicar e testar as possibilidades tanto de design como
+        de funcionalidade.
+        Além de trabalhar com elementos básicos de HTML, pude me aventurar mais no CSS de forma mais complexa, onde tive
+        que pensar nas configurações que se mostrassem mais interessantes e diferentes das que eu já havia feito, como
+        acontece aqui, quando há a troca de tipos de formulário numa mesma página.
+        Todas a composição das imagens do carrosel são de minha autoria, com execeção das imagens de pessoas que são do
+        site Unplash.com.
+        Aproveite e clique no carrosel para ver as artes!
+        Aqui, usei HTML, CSS, Javascript e JQuery.
+      </p>
+    </section>
+
+    <div class="bg-forms">
+      <div class="container-foms">
+        <div class="forms-wrap">
+          <form action="index.html" autocomplete="off" class="sign-in-form">
+            <div class="logo">
+              <img src="/images/logo_login.png" alt="logo moátoá classes" />
+              <h4>moátoá classes</h4>
+            </div>
+
+            <!--FORMULARIO DE LOGIN-->
+
+            <div class="cabeçalho">
+              <h2>Bem-vindo novamente</h2>
+            </div>
+
+            <div class="main-form">
+              <div class="input-wrap">
+                <input type="email" minlength="4" class="campo-input" autocomplete="off" required>
+                <label>E-mail</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="password" minlength="4" class="campo-input" autocomplete="off" required>
+                <label>Senha</label>
+              </div>
+
+              <input type="submit" value="Entrar" class="sign-btn" onclick="msg()">
+              <div id="mensagem">Eu funciono! Obrigada por tentar.</div>
+              <h6>Ainda não tem cadastro?</h6>
+              <a href="javascript:;" class="toggle">Cadastre-se (Clique aqui)</a>
+
+              <p class="texto">
+                Esqueceu sua senha ou detalhes do seu login?
+                <a href="javascript:;" onclick="msg()">Obtenha ajuda</a> clicando aqui.
+              </p>
+            </div>
+          </form>
+
+
+
+
+
+
+
+
+
+
+
+
+          <form action="index.html" autocomplete="off" class="sign-up-form">
+            <div class="logo">
+              <img src="/images/logo_login.png" alt="logo moátoá classes">
+              <h4>moátoá classes</h4>
+            </div>
+
+            <!--FORMULARIO DE LOGIN-->
+
+            <div class="cabeçalho">
+              <h2>Bem-vindo novamente</h2>
+            </div>
+
+            <div class="main-form">
+
+              <div class="input-wrap">
+                <input type="text" minlength="4" class="campo-input" autocomplete="off" required>
+                <label>Nome</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="email" minlength="4" class="campo-input" autocomplete="off" required>
+                <label>E-mail</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="password" minlength="4" class="campo-input" autocomplete="off" required>
+                <label>Senha</label>
+              </div>
+
+              <input type="submit" onclick="msg1()" value="Entrar" class="sign-btn">
+              <div id="mensagem1">Eu funciono! Obrigada por tentar.</div>
+              <h6>Já tem uma conta?</h6>
+              <a href="javascript:;" class="toggle">Entrar (Clique aqui)</a>
+
+              <p class="texto">
+                Ao fazer o cadastro, Eu concordo com os
+                <a href="javascript:;" onclick="msg1()">Termos de Serviços</a>e com a
+                <a href="javascript:;" onclick="msg1()">Política de Privacidade</a>.
+              </p>
+            </div>
+          </form>
+        </div>
+
+
+
+        <div class="carousel">
+          <div class="images-wrapper">
+            <img src="/images/1.abstract.png" class="image img-1 show"  alt="imagem abstrata">
+            <img src="/images/2.abstract.png" class="image img-2" alt="imagem abstrata">
+            <img src="/images/3.abstract.png" class="image img-3" alt="pessoas que fazem parte da página ">
+          </div>
+
+          <div class="texto-slider">
+            <div class="text-wrap">
+              <div class="container-texto">
+                <h2>Create your own courses</h2>
+                <h2>Customize as you like</h2>
+                <h2>Invite students to your class</h2>
+              </div>
+            </div>
+
+            <div class="bullets">
+              <span class="active" data-value="1"></span>
+              <span data-value="2"></span>
+              <span data-value="3"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Javascript -->
+
+  <script src="/script/forms-login.js"></script>
+  <script src="/script/jquery-3.6.0.min.js"></script>
+
+  
+</body>
+
+</html>

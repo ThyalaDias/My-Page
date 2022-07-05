@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+  <!--quando usar o bootstrap, passar ele como primeiro link, pq diz que eu usarei todas as coisas que lá tem-->
+  <link rel="stylesheet" href="../../css/academia/academia.css">
+  <link rel="stylesheet" href="../../css/academia/acmenu-mobile.css">
+  <link rel="stylesheet" href="../../css/academia/carousel.css">
+  <script src="https://kit.fontawesome.com/2d5a50068d.js" crossorigin="anonymous"></script>
+  <title>Contato</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="../../images/images-acad/workout/logo_transparent.png" alt="3Athletic">
+    </h1>
+
+
+    <input type="checkbox" id="control-nav">
+    <!-- nem sempre vou usar assim para criar um menu mobile, posso criar com span, div, javascrip ou jquare-->
+    <label for="control-nav" class="control-nav"></label>
+    <label for="control-nav" class="control-nav-close"></label>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="../../labs/academia/academia-index.html">Home</a>
+        </li>
+        <li>
+          <a href="../../labs/academia/atividades.html">Atividades</a>
+        </li>
+        <li>
+          <a classe="active" href="#">Contato</a>
+        </li>
+        <li>
+          <a href="../../labs/academia/registro.html">Login do Atleta</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!--CARROSSEL DE IMAGENS-->
+  <section id="carousel">
+    <div class="slides">
+      <!--BOTÃO RADIUS-->
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <!--SLIDE DE IMAGENS-->
+      <div class="slide first">
+        <img src="../../images/images-acad/workout/banner1.png" alt=" planos mensais">
+      </div>
+      <div class="slide">
+        <img src="../../images/images-acad/workout/banner2.png" alt="oferta de diferentes modalidades ded treino">
+      </div>
+      <div class="slide">
+        <img src="../../images/images-acad/workout/banner3.png" alt="blog da academia">
+      </div>
+      <div class="slide">
+        <img src="../../images/images-acad/workout/banner4.png" alt=" planos para atletas de elite">
+      </div>
+
+
+      <!--SLIDES AUTOMÁTICOS-->
+      <div class="navigation-auto ativ">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+    </div>
+
+    <!--SLIDES MANUAL-->
+    <div class="navigation-manual ativ">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+    </div>
+    </div>
+  </section>
+
+
+  <div class="form-container container mx-auto my-5 col-md-6">
+    <!--m margin - p - padding-->
+    <h2>Formulário de cadastro</h2>
+
+    <form id="formulario">
+      <div class="form-group">
+        <!--agora será feito o formulario / serão inseridos elementos de formulario. Para cada par de -->
+        <label for="nome">Nome</label>
+        <input class="form-control" type="text" name="nome" id="nome" autofocus placeholder="Digite seu nome"
+          maxlength="20">
+        <!--maxlenght para limitar o numero de caracteres-->
+      </div>
+
+      <div class="form-group">
+        <label for="idade">Idade</label>
+        <input class="form-control" type="number" name="idade" id="idade" placeholder="Coloque sua idade" min="0"
+          max="80">
+      </div>
+
+      <div>
+        <fieldset>
+          <label>Sexo:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino">
+            <label class="form-check-label" for="masculino">Masculino</label>
+          </div>
+            
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="feminino" value="feminino">
+            <label class="form-check-label" for="feminino">Feminino</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="Outros" value="Outros">
+            <label class="form-check-label" for="outros">Outro</label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="nao" value="nao">
+            <label class="form-check-label" for="nao">Não quero declarar</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input class="form-control" type="tel" name="telefone" placeholder="11 1234-5678" required maxlength="18">
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input class="form-control" type="email" name="email" id="email" placeholder="email@email.com" required min="0"
+          max="100">
+      </div>
+
+      <div class="form-group">
+        <label for="modalidade">Modalidade</label>
+        <select class="form-control" name="modalidade" id="modalidade">
+          <option selected>Escolher</option>
+          <option value="1">Corrida</option>
+          <option value="2">Bike</option>
+          <option value="3">Natação</option>
+          <option value="4">Triathlon</option>
+          <option value="5">Crossfit</option>
+          <option value="6">Zumba</option>
+          <option value="7">Hot Yoga</option>
+          <option value="8">Ballet Fit</option>
+          <option value="9">Alongamento</option>
+          <option value="9">Montar combo</option>
+
+        </select>
+      </div>
+
+      <div>
+        <button class="btn btn-success" id="cadastrar" onclick="msg()">Cadastrar</button>
+        <div id="mensagem">Esse botão funciona! Obrigada por tentar.</div>
+      </div>
+    </form>
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="row">
+      <div class="footer-coluna">
+        <h4>Sobre </h4>
+        <ul>
+          <li><a href="javascript:;" onclick="msg()">Sobre nós</a></li>
+          <li><a href="javascript:;" onclick="msg()">Nossos serviços</a></li>
+          <li><a href="javascript:;" onclick="msg()">Politica de privacidade</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Aulas</h4>
+        <ul>
+          <li><a href="javascript:;" onclick="msg()" class="b-click">Impacto</a></li>
+          <li><a href="javascript:;" onclick="msg()">Aquático</a></li>
+          <li><a href="javascript:;" onclick="msg()">Aeróbico zen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-coluna">
+        <h4>Dúvidas</h4>
+        <ul>
+          <li><a href="javascript:;" onclick="msg()">FAQ</a></li>
+          <li><a href="javascript:;" onclick="msg()">Personal Trainer</a></li>
+          <li><a href="javascript:;" onclick="msg()">Planos e descontos </a></li>
+        </ul>
+      </div>
+      <div class="footer-coluna">
+        <h4>Redes</h4>
+        <div class="social-links">
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-facebook-f"></i></a>
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-twitter"></i></a>
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-instagram"></i></a>
+          <a href="javascript:;" onclick="msg()"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../../script/academia.js"></script>
+  <script src="../../script/jquery-3.6.0.min.js"></script>
+  <script>
+    var counter = 1;
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if (counter > 4) {
+        counter = 1;
+      }
+    }, 5000);
+
+  </script>
+
+
+</body>
+</html>

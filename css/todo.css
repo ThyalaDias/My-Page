@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+    --primary-color: #6db8f99c;
+    --secondary-color: #0F0F0B;
+    --amarelo-soft: #f7f792e0;
+    --branco: #fff;
+    --cinza: #ccc;
+    --cinza-claro: #ececec;
+    --cinza-escuro: #222;
+    --black: #0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    overflow-x: hidden;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-image: url(../images/todo-list.webp);
+    background-size: 400px;
+    width: 100%;
+    color: #fff;
+    padding-bottom: 60px;
+}
+
+
+
+/*TEXTO ANIMADO*/
+/*TEXTO ANIMADO*/
+.container-animation {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    width: 100%;
+    padding: 40px 100px;
+    align-items: center;
+
+}
+
+.container-animation .text {
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-size: 50px;
+    font-weight: 400;
+    padding: 0 5px;
+}
+
+.container-animation .slider-text {
+    background-color: white;
+    margin-left: 10px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.slider-text li {
+    list-style: none;
+    color: #de9e2c;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    top: 0;
+    animation: slide 10s steps(1) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -360px;
+    }
+}
+
+.slider-text li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-left: 2px solid black;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+
+    40%,
+    60% {
+        left: calc(100% + 30px);
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/*LISTA TO-DO*/
+
+.todo {
+    display: flex;
+    width: 70vw;
+    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo__title {
+    display: contents;
+}
+
+.todo__title p {
+    display: flex;
+    background-color: white;
+    width: 75%;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0F0F0B;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.todo__title h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #0F0F0B;
+    background-color: white;
+}
+
+
+
+.todo__list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.todo__item {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #454545;
+    margin-top: 10px;
+    font-size: 1rem;
+    background-color: white;
+    border: 1px solid lightgray;
+    text-transform: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    word-break: break-all;
+    box-shadow: 0 0 20px #b8d58a;
+    border: 1px solid #b8d58a;
+}
+
+
+.todo__item>div {
+    width: 80%;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 5px;
+}
+
+
+
+.todo__item:hover {
+    box-shadow: 0 0 20px #b8d58a;
+    border: 1px solid rgb(127, 190, 246);
+    background-color: aliceblue;
+}
+
+
+.todo__item>input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo__item>input[type='checkbox'] {
+    margin-left: 10px;
+    margin-right: 10px;
+    accent-color: green;
+}
+
+.todo__item>input[type='button'] {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: red;
+    color: var(--branco);
+
+}
+
+.todo__item>input[type='button'],
+.todo__item>input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--cinza);
+    border-radius: 5px;
+    align-self: center;
+}
+
+.todo__item>input[type='checkbox']:checked+div {
+    text-decoration: line-through;
+}
+
+.todo__new-item {
+    margin-top: 2px;
+    text-align: center;
+    width: 650px;
+    height: auto;
+    padding: 1rem;
+    color: #454545;
+    font-size: 1rem;
+    word-break: break-all
+}
+
+.todo__new-item input {
+    width: 75%;
+    outline: none;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    font-size: 1rem;
+}
+
+.todo__new-item input:focus {
+    box-shadow: 0 0 20px #b8d58a;
+    border: 1px solid rgb(127, 190, 246);
+}
+
+.todo__new-item>input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+}
+
+
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 1080px) {
+    body {
+        background-size: 230px;
+        margin: 0;
+    }
+
+    .container-animation .text {
+        padding-top: 50px;
+        width: max-content;
+        font-size: 2.6rem;
+    }
+
+    .todo {
+        width: 85vw;
+        padding: 50px;
+    }
+
+    .todo__title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+    }
+
+    .todo__title p {
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .todo__item {
+        font-size: 1.5rem;
+        Width: 100%;
+        display: inline-flex;
+        box-shadow: 0 0 20px #b8d58a;
+        border: 1px solid #b8d58a;
+
+    }
+
+    .todo__new-item {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+
+    .todo__item>div {
+        font-size: 1rem;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 940px) {
+
+
+    body {
+        background-size: 200px;
+    }
+
+    /*text animation */
+    .container-animation {
+        flex-direction: column;
+    }
+
+    .slider-text li {
+        font-size: 1.5rem;
+        width: max-content;
+        position: relative;
+        animation: slide 15s steps(1) infinite;
+    }
+
+
+    .container-animation .text {
+        padding-top: 50px;
+        width: max-content;
+        font-size: 2.6rem;
+    }
+
+    /*CONTEUDO*/
+    .todo {
+        padding: 50px;
+        margin: auto;
+    }
+
+    .todo__title {
+        width: 100%;
+    }
+
+    .todo__item {
+        font-size: 1.5rem;
+        Width: 100%;
+        display: inline-flex;
+    }
+
+    .todo__new-item {
+        width: 600px;
+        font-size: 1rem;
+    }
+
+
+}
+
+
+@media (max-width: 630px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    /*text animation */
+    .container-animation {
+        flex-direction: column;
+    }
+
+    .slider-text li {
+        font-size: 1rem;
+        width: max-content;
+        position: relative;
+        animation: slide 15s steps(1) infinite;
+    }
+
+
+    .container-animation .text {
+        padding-top: 50px;
+        width: max-content;
+        font-size: 2.6rem;
+    }
+
+    main.todo {
+        width: 85vw;
+        padding: 50px;
+    }
+
+    .todo__title p {
+        width: 100%;
+        padding: 0;
+    }
+
+    .todo__title {
+        font-size: 1.8rem;
+    }
+
+    .todo__item {
+        font-size: 1rem;
+        Width: 500px;
+        display: inline-flex;
+        box-shadow: 0 0 20px #b8d58a;
+        border: 1px solid #b8d58a;
+    }
+
+    .todo__new-item {
+        width: 420px;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+
+    .todo__item>div {
+        padding: 0 10px;
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+
+    .todo__item>input[type='button'],
+    .todo__item>input[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+@media (max-width: 490px) {
+
+    .todo__item {
+        font-size: 1rem;
+        Width: 300px;
+        display: inline-flex;
+        box-shadow: 0 0 20px #b8d58a;
+        border: 1px solid #b8d58a;
+    }
+
+    #sobre h2 {
+        padding-top: 50px;
+    }
+}

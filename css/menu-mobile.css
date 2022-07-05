@@ -1,0 +1,287 @@
+input#control-nav {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media screen and (max-width:1080px){
+    header .control-nav {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid#a665d1;
+        border-width: 3px 0;
+        cursor: pointer;
+        z-index: 3;
+        
+    }
+
+
+    header .control-nav:before {
+        background: #a665d1;
+        display: block;
+        height: 2px;
+        content: '';
+    }
+
+
+    header .control-nav-close {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+        transform: translate(100%, 0);
+        transition: all 500ms ease;
+    }
+
+
+    header nav {
+        position: absolute;
+        background-color: rgba(219, 172, 245, 0.9);
+        border-left: solid rgba(184, 95, 192, 0.272) 2px;
+        margin-right: 250px;
+        overflow-x: auto;
+        padding-right: 5%;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        bottom: 0;
+        z-index: 2;
+        transform: translate(100%, 0);
+        align-content: center;
+    }
+
+    nav ul {
+        display: block;
+        padding-left: 30px;
+    }
+
+    
+
+    nav {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 0 0 0;
+    }
+
+
+    nav a {
+        color: #ddd;
+    }
+
+
+    nav a:focus,
+    nav a:active {
+        color: white;
+    }
+
+
+    nav li a {
+        display: block;
+        line-height: 32px;
+        margin-right: 5px;
+    }
+
+
+    #control-nav:checked~.control-nav-close,
+    #control-nav:checked~nav {
+     transform: translate(0, 0);
+    }
+}
+
+
+@media screen and (max-width:930px) {
+    header .control-nav {
+        position: absolute;
+
+        right: 20px;
+        top: 40px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid#a665d1;
+        border-width: 3px 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+
+    header .control-nav:before {
+        background: #a665d1;
+        display: block;
+        height: 2px;
+        content: '';
+    }
+
+
+    header .control-nav-close {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+        transform: translate(100%, 0);
+       
+        transition: all 500ms ease;
+    }
+
+
+    header nav {
+        position: absolute;
+        background-color: rgba(219, 172, 245, 0.9);
+        border-left: solid rgba(184, 95, 192, 0.272) 2px;
+        margin-right: 250px;
+        overflow-x: auto;
+        padding-right: 5%;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        bottom: 0;
+        z-index: 2;
+        transform: translate(100%, 0);
+    }
+
+    nav ul {
+        display: block;
+        padding-left: 30px;
+    }
+
+    nav {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 0 0 0;
+    }
+
+
+    nav a {
+        color: #ddd;
+    }
+
+
+    nav a:focus,
+    nav a:active {
+        color: white;
+    }
+
+
+    nav li a {
+        display: block;
+        line-height: 32px;
+        margin-right: 5px;
+    }
+
+
+    #control-nav:checked~.control-nav-close,
+    #control-nav:checked~nav {
+        transform: translate(0, 0);
+    }
+
+}
+
+@media screen and (max-width:640px),
+ (max-width:480px) {
+    
+    header .control-nav {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid#a665d1 ;
+        border-width: 3px 0;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+
+    header .control-nav:before {
+        background: #a665d1;
+        display: block;
+        height: 2px;
+        content: '';
+    }
+
+
+    header .control-nav-close {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+        transform: translate(100%, 0);
+        transition: all 500ms ease;
+    }
+
+
+    header nav {
+        background-color: rgba(219, 172, 245, 0.9);
+        border-left: solid rgba(184, 95, 192, 0.272) 2px;
+        margin-right: 250px;
+        overflow-x: auto;
+        padding-right: 5%;
+       position: fixed;
+        top: 0;
+        right: -250px;
+        bottom: 0;
+        z-index: 2;
+        transform: translate(100%, 0);
+    }
+
+    nav ul {
+        display: block;
+       
+    }
+
+    nav {
+        position: fixed;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 0 0 0;
+    }
+
+
+    nav a {
+        color: #ddd;
+    }
+
+
+    nav a:focus,
+    nav a:active {
+        color: white;
+    }
+
+
+    nav li a {
+        display: block;
+        line-height: 32px;
+        margin-right: 5px;
+    }
+
+
+    #control-nav:checked~.control-nav-close,
+
+    #control-nav:checked~nav {
+        transform: translate(0, 0);
+
+    }
+
+}
